@@ -75,7 +75,7 @@ celery -A weather_project worker --loglevel=info
 
 ### 🌤️ Consultar clima
 ```
-GET /api/v1/weather/?city=São Paulo&country=BR
+GET /api/v1/?city=São Paulo&country=BR
 ```
 
 **Resposta:**
@@ -155,10 +155,3 @@ weather_project/
 ├── Dockerfile             # Imagem da app
 └── requirements.txt       # Dependências
 ```
-
-## TODO
-
-- [ ] Autenticação JWT
-- [ ] Métricas Prometheus
-- [ ] Deploy Kubernetes
-- [ ] Webhooks para alertas 
