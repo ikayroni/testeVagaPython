@@ -1,0 +1,428 @@
+INFO 2025-06-22 22:56:06,784 autoreload 22716 27532 Watching for file changes with StatReloader
+ERROR 2025-06-22 22:56:26,701 log 22716 22296 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 416, in initial
+    self.check_throttles(request)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 359, in check_throttles
+    if not throttle.allow_request(request, self):
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\throttling.py", line 123, in allow_request
+    self.history = self.cache.get(self.key, [])
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+ERROR 2025-06-22 22:56:26,706 basehttp 22716 22296 "GET / HTTP/1.1" 500 149481
+WARNING 2025-06-22 22:56:27,198 log 22716 22296 Not Found: /favicon.ico
+WARNING 2025-06-22 22:56:27,198 basehttp 22716 22296 "GET /favicon.ico HTTP/1.1" 404 2755
+WARNING 2025-06-22 22:56:40,167 log 22716 22296 Not Found: /docs
+WARNING 2025-06-22 22:56:40,168 basehttp 22716 22296 "GET /docs HTTP/1.1" 404 2734
+ERROR 2025-06-22 22:56:50,834 log 22716 22296 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\client\default.py", line 260, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 10061 connecting to 127.0.0.1:6379. Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 416, in initial
+    self.check_throttles(request)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 359, in check_throttles
+    if not throttle.allow_request(request, self):
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\throttling.py", line 123, in allow_request
+    self.history = self.cache.get(self.key, [])
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\cache.py", line 36, in _decorator
+    raise e.__cause__
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\django_redis\client\default.py", line 258, in get
+    value = client.get(key)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\commands\core.py", line 1829, in get
+    return self.execute_command("GET", name)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\client.py", line 533, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\connection.py", line 1086, in get_connection
+    connection.connect()
+  File "C:\Users\Kayron\AppData\Local\Programs\Python\Python39\lib\site-packages\redis\connection.py", line 270, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+ERROR 2025-06-22 22:56:50,840 basehttp 22716 22296 "GET / HTTP/1.1" 500 149481
+INFO 2025-06-22 23:01:12,919 autoreload 22716 27532 C:\Users\Kayron\Documents\testeSeniorPython\weather_project\settings.py changed, reloading.
+INFO 2025-06-22 23:01:13,670 autoreload 26464 31916 Watching for file changes with StatReloader
+INFO 2025-06-22 23:03:27,720 autoreload 26464 31916 C:\Users\Kayron\Documents\testeSeniorPython\weather_project\settings.py changed, reloading.
+INFO 2025-06-22 23:03:28,696 autoreload 14792 7372 Watching for file changes with StatReloader
+INFO 2025-06-22 23:04:26,909 autoreload 7 124847970007936 Watching for file changes with StatReloader
+INFO 2025-06-22 23:04:54,814 autoreload 28840 3536 Watching for file changes with StatReloader
+INFO 2025-06-22 23:05:09,345 autoreload 7 128703774169984 Watching for file changes with StatReloader
+INFO 2025-06-22 23:05:58,460 autoreload 7 139226813168512 Watching for file changes with StatReloader
+INFO 2025-06-22 23:07:03,093 basehttp 7 139226723116736 "GET / HTTP/1.1" 200 1525
+INFO 2025-06-22 23:07:03,134 basehttp 7 139226723116736 "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-06-22 23:07:03,137 basehttp 7 139226714724032 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+INFO 2025-06-22 23:07:03,143 basehttp 7 139226689545920 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-06-22 23:07:03,145 basehttp 7 139226681153216 "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+INFO 2025-06-22 23:07:03,147 basehttp 7 139226697938624 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+INFO 2025-06-22 23:07:03,152 basehttp 7 139226706331328 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+INFO 2025-06-22 23:07:03,164 basehttp 7 139226723116736 "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+INFO 2025-06-22 23:07:03,492 basehttp 7 139226706331328 "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+INFO 2025-06-22 23:07:03,570 basehttp 7 139226706331328 "GET /?format=openapi HTTP/1.1" 200 4973
+ERROR 2025-06-22 23:07:36,114 log 7 139226188342976 Internal Server Error: /api/v1/weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_current_weather() missing 1 required positional argument: 'request'
+ERROR 2025-06-22 23:07:36,115 basehttp 7 139226188342976 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 500 93354
+ERROR 2025-06-22 23:07:53,722 log 7 139226196735680 Internal Server Error: /api/v1/weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_current_weather() missing 1 required positional argument: 'request'
+ERROR 2025-06-22 23:07:53,723 basehttp 7 139226196735680 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 500 93354
+ERROR 2025-06-22 23:07:59,384 log 7 139226196735680 Internal Server Error: /api/v1/weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_current_weather() missing 1 required positional argument: 'request'
+ERROR 2025-06-22 23:07:59,385 basehttp 7 139226196735680 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 500 93354
+INFO 2025-06-22 23:09:07,801 autoreload 7 128632234564480 Watching for file changes with StatReloader
+ERROR 2025-06-22 23:09:12,750 log 7 128632136652480 Internal Server Error: /api/v1/weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_current_weather() missing 1 required positional argument: 'request'
+ERROR 2025-06-22 23:09:12,752 basehttp 7 128632136652480 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 500 93503
+INFO 2025-06-22 23:09:21,173 autoreload 35800 13784 Watching for file changes with StatReloader
+ERROR 2025-06-22 23:09:23,908 log 7 128632136652480 Internal Server Error: /api/v1/weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_current_weather() missing 1 required positional argument: 'request'
+ERROR 2025-06-22 23:09:23,909 basehttp 7 128632136652480 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 500 93503
+ERROR 2025-06-22 23:09:44,302 log 7 128632136652480 Internal Server Error: /api/v1/weather/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_current_weather() missing 1 required positional argument: 'request'
+ERROR 2025-06-22 23:09:44,303 basehttp 7 128632136652480 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 500 93503
+INFO 2025-06-22 23:11:10,684 autoreload 35800 13784 C:\Users\Kayron\Documents\testeSeniorPython\weather\views.py changed, reloading.
+INFO 2025-06-22 23:11:10,871 autoreload 7 128632234564480 /code/weather/views.py changed, reloading.
+INFO 2025-06-22 23:11:11,641 autoreload 11 130908381637504 Watching for file changes with StatReloader
+INFO 2025-06-22 23:11:11,676 autoreload 23736 12100 Watching for file changes with StatReloader
+WARNING 2025-06-22 23:11:21,842 log 11 130908283721408 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:11:21,842 basehttp 11 130908283721408 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 400 54
+WARNING 2025-06-22 23:12:19,766 log 11 130908283721408 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:12:19,766 basehttp 11 130908283721408 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 400 54
+INFO 2025-06-22 23:12:32,345 autoreload 32096 34732 Watching for file changes with StatReloader
+WARNING 2025-06-22 23:12:33,965 log 11 130908283721408 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:12:33,966 basehttp 11 130908283721408 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 400 54
+INFO 2025-06-22 23:13:27,954 autoreload 7 139678100319104 Watching for file changes with StatReloader
+INFO 2025-06-22 23:13:31,933 basehttp 7 139678001911488 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 200 261
+INFO 2025-06-22 23:13:36,151 basehttp 7 139678001911488 "GET /api/v1/weather/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 200 260
+WARNING 2025-06-22 23:15:19,622 log 11 125926015589248 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:15:19,628 log 11 125926015589248 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:15:19,633 log 11 125926015589248 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:15:19,640 log 11 125926015589248 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:15:19,658 log 11 125926015589248 Bad Request: /api/v1/weather/history/
+WARNING 2025-06-22 23:15:19,668 log 11 125926015589248 Bad Request: /api/v1/weather/history/
+WARNING 2025-06-22 23:16:30,377 log 17 128930720611200 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:16:30,383 log 17 128930720611200 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:16:30,387 log 17 128930720611200 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:16:30,393 log 17 128930720611200 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:16:30,411 log 17 128930720611200 Bad Request: /api/v1/weather/history/
+WARNING 2025-06-22 23:16:30,419 log 17 128930720611200 Bad Request: /api/v1/weather/history/
+WARNING 2025-06-22 23:17:51,823 log 23 127852828347264 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:17:51,828 log 23 127852828347264 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:17:51,832 log 23 127852828347264 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:17:51,838 log 23 127852828347264 Bad Request: /api/v1/weather/
+WARNING 2025-06-22 23:17:51,856 log 23 127852828347264 Bad Request: /api/v1/weather/history/
+WARNING 2025-06-22 23:17:51,865 log 23 127852828347264 Bad Request: /api/v1/weather/history/
+INFO 2025-06-22 23:19:31,472 basehttp 7 139677991421632 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 262
+INFO 2025-06-22 23:19:36,511 basehttp 7 139677991421632 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 261
+INFO 2025-06-22 23:26:59,869 autoreload 7 139678100319104 /code/weather/views.py changed, reloading.
+INFO 2025-06-22 23:27:00,434 autoreload 32096 34732 C:\Users\Kayron\Documents\testeSeniorPython\weather\views.py changed, reloading.
+INFO 2025-06-22 23:27:00,548 autoreload 31 131671400078208 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:01,303 autoreload 34212 6644 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:27,134 autoreload 34212 6644 C:\Users\Kayron\Documents\testeSeniorPython\weather\services.py changed, reloading.
+INFO 2025-06-22 23:27:27,575 autoreload 31 131671400078208 /code/weather/services.py changed, reloading.
+INFO 2025-06-22 23:27:28,066 autoreload 16580 31032 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:28,200 autoreload 33 132846842317696 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:45,475 autoreload 16580 31032 C:\Users\Kayron\Documents\testeSeniorPython\weather\tasks.py changed, reloading.
+INFO 2025-06-22 23:27:45,994 autoreload 33 132846842317696 /code/weather/tasks.py changed, reloading.
+INFO 2025-06-22 23:27:46,293 autoreload 30896 28452 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:46,649 autoreload 35 131278882552704 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:53,174 autoreload 35 131278882552704 /code/weather/urls.py changed, reloading.
+INFO 2025-06-22 23:27:53,731 autoreload 37 125418589412224 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:54,172 autoreload 30896 28452 C:\Users\Kayron\Documents\testeSeniorPython\weather\urls.py changed, reloading.
+INFO 2025-06-22 23:27:54,943 autoreload 29476 19788 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:58,242 autoreload 37 125418589412224 /code/weather/urls.py changed, reloading.
+INFO 2025-06-22 23:27:58,733 autoreload 29476 19788 C:\Users\Kayron\Documents\testeSeniorPython\weather\urls.py changed, reloading.
+INFO 2025-06-22 23:27:58,935 autoreload 39 126274989783936 Watching for file changes with StatReloader
+INFO 2025-06-22 23:27:59,847 autoreload 35480 23380 Watching for file changes with StatReloader
+WARNING 2025-06-22 23:28:44,985 log 39 126274891667136 Not Found: /api/v1/weather/
+WARNING 2025-06-22 23:28:44,986 basehttp 39 126274891667136 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 404 3237
+INFO 2025-06-22 23:30:08,419 autoreload 39 126274989783936 /code/weather/services.py changed, reloading.
+INFO 2025-06-22 23:30:08,856 autoreload 35480 23380 C:\Users\Kayron\Documents\testeSeniorPython\weather\services.py changed, reloading.
+INFO 2025-06-22 23:30:09,066 autoreload 49 140611185535872 Watching for file changes with StatReloader
+INFO 2025-06-22 23:30:09,674 autoreload 11340 29784 Watching for file changes with StatReloader
+WARNING 2025-06-22 23:30:22,292 log 51 133551821482880 Bad Request: /api/v1/
+WARNING 2025-06-22 23:30:22,297 log 51 133551821482880 Bad Request: /api/v1/
+WARNING 2025-06-22 23:30:22,301 log 51 133551821482880 Bad Request: /api/v1/
+WARNING 2025-06-22 23:30:22,307 log 51 133551821482880 Bad Request: /api/v1/
+WARNING 2025-06-22 23:30:22,327 log 51 133551821482880 Bad Request: /api/v1/history/
+WARNING 2025-06-22 23:30:22,335 log 51 133551821482880 Bad Request: /api/v1/history/
+WARNING 2025-06-22 23:30:28,946 log 49 140611086702272 Not Found: /api/v1/weather/
+WARNING 2025-06-22 23:30:28,947 basehttp 49 140611086702272 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 404 3237
+WARNING 2025-06-22 23:32:43,396 log 59 125357568998272 Bad Request: /api/v1/
+WARNING 2025-06-22 23:32:43,400 log 59 125357568998272 Bad Request: /api/v1/
+WARNING 2025-06-22 23:32:43,404 log 59 125357568998272 Bad Request: /api/v1/
+WARNING 2025-06-22 23:32:43,410 log 59 125357568998272 Bad Request: /api/v1/
+WARNING 2025-06-22 23:32:43,427 log 59 125357568998272 Bad Request: /api/v1/history/
+WARNING 2025-06-22 23:32:43,435 log 59 125357568998272 Bad Request: /api/v1/history/
+WARNING 2025-06-22 23:34:12,925 log 65 128052165254016 Bad Request: /api/v1/
+WARNING 2025-06-22 23:34:12,929 log 65 128052165254016 Bad Request: /api/v1/
+WARNING 2025-06-22 23:34:12,934 log 65 128052165254016 Bad Request: /api/v1/
+WARNING 2025-06-22 23:34:12,940 log 65 128052165254016 Bad Request: /api/v1/
+WARNING 2025-06-22 23:34:12,959 log 65 128052165254016 Bad Request: /api/v1/history/
+WARNING 2025-06-22 23:34:12,966 log 65 128052165254016 Bad Request: /api/v1/history/
+WARNING 2025-06-22 23:34:28,145 log 49 140611077260992 Not Found: /api/v1/weather/
+WARNING 2025-06-22 23:34:28,146 basehttp 49 140611077260992 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 404 3237
+INFO 2025-06-22 23:34:44,224 autoreload 7 130700563921792 Watching for file changes with StatReloader
+WARNING 2025-06-22 23:34:53,791 log 7 130700465395392 Not Found: /api/v1/weather/
+WARNING 2025-06-22 23:34:53,792 basehttp 7 130700465395392 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 404 3237
+WARNING 2025-06-22 23:35:14,092 log 7 130700465395392 Not Found: /api/v1/weather/
+WARNING 2025-06-22 23:35:14,093 basehttp 7 130700465395392 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 404 3237
+INFO 2025-06-22 23:35:21,481 autoreload 27176 22024 Watching for file changes with StatReloader
+WARNING 2025-06-22 23:35:23,274 log 7 130700465395392 Not Found: /api/v1/weather/
+WARNING 2025-06-22 23:35:23,275 basehttp 7 130700465395392 "GET /api/v1/weather/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 404 3237
+INFO 2025-06-22 23:35:53,461 basehttp 7 130700465395392 "GET /api/v1/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 265
+INFO 2025-06-22 23:37:29,014 basehttp 7 130700453856960 "GET /api/v1/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 264
+INFO 2025-06-22 23:37:43,729 basehttp 7 130700453856960 "GET /api/v1/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 264
+INFO 2025-06-22 23:37:55,250 basehttp 7 130700453856960 "GET /api/v1/?city=S%C3%A3o%20Paulo&country=BR HTTP/1.1" 200 263
+INFO 2025-06-22 23:37:59,946 basehttp 7 130700453856960 "GET /api/v1/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 264
+INFO 2025-06-22 23:38:07,137 basehttp 7 130700453856960 "GET /api/v1/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 264
+INFO 2025-06-22 23:38:09,479 basehttp 7 130700453856960 "GET /api/v1/?city=Rio%20de%20Janeiro&country=BR HTTP/1.1" 200 264
+INFO 2025-06-22 23:38:25,922 basehttp 7 130700473788096 "GET / HTTP/1.1" 200 1525
+INFO 2025-06-22 23:38:25,945 basehttp 7 130700473788096 "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:25,948 basehttp 7 130700445464256 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:25,952 basehttp 7 130700437071552 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:25,956 basehttp 7 130700428678848 "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:25,957 basehttp 7 130700445464256 "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:25,957 basehttp 7 130699948455616 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:25,958 basehttp 7 130699940062912 "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:26,218 basehttp 7 130700445464256 "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 304 0
+INFO 2025-06-22 23:38:26,325 basehttp 7 130700445464256 "GET /?format=openapi HTTP/1.1" 200 4801
+INFO 2025-06-22 23:38:48,808 basehttp 7 130700445464256 "GET /api/v1/history/?limit=10 HTTP/1.1" 200 3468
+INFO 2025-06-22 23:39:07,726 basehttp 7 130700453856960 "GET /api/v1/history/ HTTP/1.1" 200 3468
